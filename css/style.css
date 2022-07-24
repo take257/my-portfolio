@@ -1,0 +1,138 @@
+/* googleFont */
+html {
+  font-size: 100%; /* ユーザの指定した文字サイズを正しく反映させるため */
+  font-family: "Indie Flower", cursive;
+}
+
+h1,
+h2 {
+  margin-left: 2%;
+}
+
+/*大きな背景画像*/
+.big-bg {
+  background-size: cover;
+  background-position: center top;
+}
+#home {
+  background-image: url(../images/IMG_3949.jpg),
+    linear-gradient(to left top, #d3c876, #ffffff, #6af8f1);
+  background-blend-mode: multiply;
+  min-height: 100vh;
+} /*linear-gradient(#c9ffbf, #ffafbd)で画面にグラデーションをつける。to left top,は右下から左上にグラデーション background-blend-mode: luminosity;で重ね合わせる。multiply… 絵具を混ぜたような結果となる*/
+img {
+  max-width: 100%;
+} /*画像が親要素より大きくなることを防ぐ*/
+
+/*ヘッダー関係*/
+.page-header h1 {
+  font-size: 4em;
+  margin: 0 0 0 0.5em;
+}
+.main-nav {
+  display: flex;
+  font-size: 1.25em;
+  list-style: none; /*リストのくろボッチなし*/
+}
+.main-nav li {
+  margin: 10px 0 0 36px;
+}
+.main-nav a {
+  color: #432;
+}
+.main-nav a:hover {
+  color: #43853d; /*hoverは元から要素の要されているクラス。プロパティの.onclickみたいなもの*/
+}
+.page-header {
+  display: flex; /*横並び*/
+  justify-content: space-between; /*flexと指定されたアイテムの間や周囲に空間を配置する方法を定義*/
+  max-width: 1100px;
+  margin: 0 auto; /*ブロック要素を中央揃えにできる。例えばdiv,pなど。インライン要素imgなどはできない>*/
+}
+
+/*フェードイン*/
+.fadein-before {
+  opacity: 0; /*透過度0で表示されない*/
+  transform: translate(30px); /*要素を元々100px右に配置しておく*/
+  transition: opacity 1s, transform 1s; /*透過度と表示位置を1秒かけて変化させる*/
+}
+
+.fadein-after {
+  opacity: 1;
+  transform: translate(0); /*元の位置に戻す*/
+}
+
+.divspace {
+  display: flex;
+  flex-flow: colum;
+  align-items: flex-start; /*もともとstretchで高い方の要素の長さに合わせて表示されるから画像が引き伸ばされる */
+}
+
+/*メインコンテンツ植物写真*/
+.plant {
+  width: 40%;
+  max-width: 300px;
+  min-width: 200px;
+  margin: 0 0 0 2em;
+}
+/*メインコンテンツリフティング写真*/
+
+.Lifting {
+  width: 40%;
+  max-width: 300px;
+  min-width: 200px;
+  margin: 0 0 0 2em;
+}
+.removepicture {
+  display: none;
+}
+
+/*Basic inromation,Background,Favorite thingsの設定*/
+.titlespace {
+  margin: 1em 0 1.5em 0;
+  font-size: 2.5em;
+  height: 7vh;
+}
+.titlespace_other {
+  margin: 2em 0 1.5em 0;
+  height: 7vh;
+  font-size: 2.5em;
+  white-space: nowrap; /*改行させない*/
+}
+
+.basic_l_and_a {
+  margin: 1em 0 0 4em;
+  white-space: nowrap; /*改行させない*/
+}
+.basic_l_and_a_2 {
+  margin: 1em 0 0 2em;
+  white-space: nowrap; /*改行させない*/
+}
+.basic_l_and_a_3 {
+  margin: 1em 0 0 4em;
+  white-space: nowrap; /*改行させない*/
+}
+
+.basic_label {
+  font-size: 2.5em;
+  margin: 0 0 0.3em 0;
+}
+.basic_anser {
+  font-family: YuMin_36pKn-Medium;
+  font-size: 2em;
+}
+
+/*フッター*/
+/* footer {
+  height: 2em;
+  background-color: rgb(85, 84, 82);
+} */
+.FFF {
+  text-align: center;
+}
+.icon {
+  margin: 20px 20px 20px 20px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+}
