@@ -1,25 +1,30 @@
-/* googleFont */
+/* ページ内共通設定とgoogleFont */
 html {
   font-size: 100%; /* ユーザの指定した文字サイズを正しく反映させるため */
-  font-family: "Indie Flower", cursive;
+  font-family: "Indie Flower", cursive; /*Googleフォントの指定*/
 }
 
 h1,
 h2 {
   margin-left: 2%;
 }
+/*ここまで*/
 
-/*大きな背景画像*/
+/*フルスクリーンの画像。background-size: coverは、画像をコンテナーいっぱいにできるだけ大きく拡大縮小し、
+必要に応じて画像を引き伸ばします。
+画像の比率が要素と異なる場合は、何もない空間が残らないように、上下または左右が切り取られる。*/
+/*linear-gradient(#c9ffbf, #ffafbd)で画面にグラデーションをつける。lineae(リニア)は縦方向のしま。
+to left top,は右下から左上にグラデーション
+ background-blend-mode:multiply… 絵具を混ぜたような結果となる*/
 .big-bg {
   background-size: cover;
   background-position: center top;
-}
-#home {
   background-image: url(../images/IMG_3949.jpg),
     linear-gradient(to left top, #d3c876, #ffffff, #6af8f1);
   background-blend-mode: multiply;
   min-height: 100vh;
-} /*linear-gradient(#c9ffbf, #ffafbd)で画面にグラデーションをつける。to left top,は右下から左上にグラデーション background-blend-mode: luminosity;で重ね合わせる。multiply… 絵具を混ぜたような結果となる*/
+}
+
 img {
   max-width: 100%;
 } /*画像が親要素より大きくなることを防ぐ*/
@@ -62,6 +67,7 @@ img {
   transform: translate(0); /*元の位置に戻す*/
 }
 
+/*全体の要素の配置について*/
 .divspace {
   display: flex;
   flex-flow: colum;
@@ -76,7 +82,6 @@ img {
   margin: 0 0 0 2em;
 }
 /*メインコンテンツリフティング写真*/
-
 .Lifting {
   width: 40%;
   max-width: 300px;

@@ -1,3 +1,11 @@
+/*フェードインの考えかた
+1,フェードインのタイミングはページが表示される高さ(=パソコン画面の高さ)(window.innerHeight;)
+  >表示されている画面上で上(左上)から要素までの長さ(getBoundingClientRect().top)
+の時
+2,cssで透過度100%て少し右にずらして設置している→fadein-afterをクラスに加えて、cssで
+透過度0の表示したい位置に設置する　＊cssで、htmlの同じ要素に適応される設定がある場合、
+後から出てきた方が表示される。この上書きの規則カスケードというらしい。
+*/
 const FADEIN_BASIC = document.getElementById("basic_fadein");
 
 window.addEventListener("scroll", function () {
@@ -41,8 +49,13 @@ window.addEventListener("scroll", function () {
   }
 });
 
+/*リフティングの切替え
+○と■のように画像を押すと切りremovepictureがクラスに加わるようになっている.
+removepictureはcssでdisplay: none;で表示しないという機能。動いている画像を
+クリックすると静止画画の方からremovepictureが取り除かれて表示される一方で動いている方に
+removepictureが追加されるようになっている。*/
 // // /*ここからリフティング切り替え*/
-const lifting_space = document.getElementById("Liftingchange");
+
 const lifting_stop = document.getElementById("Liftingstop");
 const lifting_strat = document.getElementById("Liftingstrat");
 
