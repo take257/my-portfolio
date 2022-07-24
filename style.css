@@ -19,7 +19,7 @@ to left top,は右下から左上にグラデーション
 .big-bg {
   background-size: cover;
   background-position: center top;
-  background-image: url(../images/IMG_3949.jpg),
+  background-image: url(./images/IMG_3949.jpg),
     linear-gradient(to left top, #d3c876, #ffffff, #6af8f1);
   background-blend-mode: multiply;
   min-height: 100vh;
@@ -102,20 +102,20 @@ img {
   margin: 2em 0 1.5em 0;
   height: 7vh;
   font-size: 2.5em;
-  white-space: nowrap; /*改行させない*/
+  /* white-space: nowrap; 改行させない */
 }
 
 .basic_l_and_a {
   margin: 1em 0 0 4em;
-  white-space: nowrap; /*改行させない*/
+  /* white-space: nowrap; 改行させない */
 }
 .basic_l_and_a_2 {
   margin: 1em 0 0 2em;
-  white-space: nowrap; /*改行させない*/
+  /* white-space: nowrap; 改行させない */
 }
 .basic_l_and_a_3 {
   margin: 1em 0 0 4em;
-  white-space: nowrap; /*改行させない*/
+  /* white-space: nowrap; 改行させない */
 }
 
 .basic_label {
