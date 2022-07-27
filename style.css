@@ -56,7 +56,7 @@ body {
 .fadein-before {
   opacity: 0;
   transform: translate(100px);
-  transition: opacity 1s, transform 1s;
+  transition: opacity 1s, transform 1.5s;
 }
 
 .fadein-after {
