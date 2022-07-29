@@ -15,7 +15,9 @@ img {
 body {
   overflow-x: hidden;
 }
-
+.wrapper {
+  overflow-x: hidden;
+}
 .big-bg {
   background-size: contain;
   background-position: center;
