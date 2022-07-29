@@ -1,38 +1,55 @@
-const FADEIN_BASIC = document.getElementById("basic_fadein");
+const slideDown = function (el) {
+  el.style.height = "auto";
+  let h = el.offsetHeight;
+  el.style.height = h + "px";
+  el.animate([{ height: 0 }, { height: h + "px" }], {
+    duration: 300,
+  });
+};
 
-window.addEventListener("scroll", function () {
-  const FADEIN_BASIC_TOP = FADEIN_BASIC.getBoundingClientRect().top;
-  const WINDOW_HEIGHT = window.innerHeight;
-  if (WINDOW_HEIGHT > FADEIN_BASIC_TOP) {
-    FADEIN_BASIC.classList.add("fadein-after");
+const slideUp = function (el) {
+  let h = el.offsetHeight;
+  el.style.height = h + "px";
+  el.animate([{ height: h + "px" }, { height: 0 }], { duration: 300 });
+  el.style.height = 0;
+};
+
+const hiddenpart = document.getElementById("accordions");
+const accordionBtn = document.getElementById("accordionBtn");
+const BtnandList = document.getElementById("BtnandUl");
+
+accordionBtn.addEventListener("click", function (e) {
+  BtnandList.classList.toggle("active");
+  const content = document.getElementById("UlandLi");
+
+  if (BtnandList.classList.contains("active")) {
+    slideDown(content);
   } else {
-    FADEIN_BASIC.classList.remove("fadein-after");
+    slideUp(content);
   }
 });
-// //植物の写真右側にフェードイン用
 
-const FADEIN_BACKGROUND = document.getElementById("background_fadein");
-
-window.addEventListener("scroll", function () {
-  const FADEIN_BACKGROUND_TOP = FADEIN_BACKGROUND.getBoundingClientRect().top;
+const FADEIN = function (el) {
+  const FADEIN_TOP = el.getBoundingClientRect().top;
   const WINDOW_HEIGHT = window.innerHeight;
-  if (WINDOW_HEIGHT > FADEIN_BACKGROUND_TOP) {
-    FADEIN_BACKGROUND.classList.add("fadein-after");
+  if (WINDOW_HEIGHT > FADEIN_TOP) {
+    el.classList.add("fadein-after");
   } else {
-    FADEIN_BACKGROUND.classList.remove("fadein-after");
+    el.classList.remove("fadein-after");
   }
+};
+
+const first = document.getElementById("basic_fadein");
+const second = document.getElementById("background_fadein");
+const third = document.getElementById("favorite_fadein");
+window.addEventListener("scroll", function () {
+  FADEIN(first);
 });
-
-const FADEIN_FAVORITE = document.getElementById("favorite_fadein");
-
 window.addEventListener("scroll", function () {
-  const FADEIN_FAVORITE_TOP = FADEIN_FAVORITE.getBoundingClientRect().top;
-  const WINDOW_HEIGHT = window.innerHeight;
-  if (WINDOW_HEIGHT > FADEIN_FAVORITE_TOP) {
-    FADEIN_FAVORITE.classList.add("fadein-after");
-  } else {
-    FADEIN_FAVORITE.classList.remove("fadein-after");
-  }
+  FADEIN(second);
+});
+window.addEventListener("scroll", function () {
+  FADEIN(third);
 });
 
 const lifting_stop = document.getElementById("Liftingstop");

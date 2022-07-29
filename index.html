@@ -14,26 +14,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet"> 
-    
+
 
     <link rel="stylesheet" href="style.css"/>
     <title>My Portfolio</title>
   </head>
   
 
-  <body>
-  <div id="home" class="big-bg">
+  <body>      
+    <div id="home" class="big-bg">
       <header class="page-header">
-          <h1>Take</h1>
-          <nav>
-            <ul class="main-nav">
+        <h1>Take</h1>
+      </header>
+      <div>
+        <ul class="include-accordion scroll-control around-accordion" id="accordions">
+          <li id="BtnandUl">
+            <button class="accordionBtn" id="accordionBtn" type="button">Menu</button>
+            <ul class="main-nav" id="UlandLi">
               <li class="menu"><a href="#Background">Basic Information</a></li>
               <li class="menu"><a href="#Basic-infomation">Background</a></li>
               <li class="menu"><a href="#Favorite-thing">Favorite things</a></li>
             </ul>
-          </nav>
-      </header>
-      <div class="home-content"></div>
+          </li>
+      </div>
     </div>
 
     <section>
@@ -42,7 +45,7 @@
       </div>
       <div id="basic_fadein" class="fadein-before divspace">
           <div class="Lifting">
-            <img src="./images/take.jpg" alt="take"/>
+            <img src="./images/take2.jpg" alt="take"/>
           </div>
           <div class="basic_l_and_a">
             <p class="basic_label">Name</p>
@@ -63,20 +66,15 @@
       <div class="titlespace_other">
         <h1 id="Background">Background</h1>
       </div>
-      <!-- <div id="background_fadein_right" class="fadein-before"> -->
-      <!-- </div> -->
       <div id="background_fadein" class="fadein-before divspace">
-        <!-- <div class="divspace"> -->
           <div class="basic_l_and_a_2">
             <p class="basic_label">graduate school</p>
             <p class="basic_anser">名古屋大学大学院</p>
           </div>
           <div class="basic_l_and_a_2">
-            <p class="basic_label">department</p>
-            <p class="basic_anser">生命農学研究科</p>
+            <p class="basic_label">University</p>
+            <p class="basic_anser">名城大学</p>
           </div>
-        <!-- </div> -->
-        <!-- <div class="divspace"> -->
           <div class="basic_l_and_a_2">
             <p class="basic_label">my study</p>
             <p class="basic_anser">植物の体内時計</p>
@@ -84,7 +82,6 @@
           <div class="plant">
             <img src="./images/plant_circle.jpg" alt="植物"/>
           </div>
-        <!-- </div> --> 
       </div>
     </section>
 
@@ -93,7 +90,6 @@
         <h1 id="Favorite-thing">Favorite things</h1>
       </div>
       <div id="favorite_fadein" class="fadein-before divspace">
-
           <div class="Lifting">
             <img src="./images/Lifting-stop.png" alt="リフティングストップ" id="Liftingstop">
             <img src="./gif/Lifting.gif" alt="Lifting" id="Liftingstrat" class="removepicture"/>
@@ -118,7 +114,6 @@
         <a href="https://www.instagram.com/nomu1524/" target="_blank" >
           <img src="./images/glyph-logo_May2016.png" alt="インスタロゴ" class="icon">
         </a>
-
         <p><small>&copy; 2022 Take</small></p>
       </div>
     </footer>

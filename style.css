@@ -17,46 +17,81 @@ body {
 }
 
 .big-bg {
-  background-size: cover;
-  background-position: center top;
-  background-image: url(./images/fullscreen2.png),
-    linear-gradient(to left top, #d3c876, #ffffff, #6af8f1);
+  background-size: contain;
+  background-position: center;
+  background-image: url(./images/mypicture.png),
+    linear-gradient(to left top, #f3f4dc, #ffffff, #c1f3f7);
   background-blend-mode: multiply;
   min-height: 100vh;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  max-height: 5.5em;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: rgb(0, 0, 0);
+  opacity: 80%;
 }
 
 .page-header h1 {
   font-size: 4em;
   margin: 0 0 0 0.5em;
-  color: rgb(223, 152, 52);
+  color: #fff;
+  opacity: 100;
 }
+
+.around-accordion {
+  color: #fff;
+  width: 150px;
+  padding: 0;
+  margin: -5em 0 0 30px;
+  float: right;
+}
+
 .main-nav {
-  display: flex;
-  font-size: 1.25em;
+  border-top: 1px solid rgb(0, 0, 0);
+  background: rgb(0, 0, 0);
+  opacity: 80%;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
   list-style: none;
+  transition: 0.5s;
 }
+
 .main-nav li {
-  margin: 1.5em 2em 0 36px;
+  padding: 10px 0 10px 10px;
 }
 .main-nav a {
-  color: rgb(223, 152, 52);
+  color: #fff;
+  font-weight: 900;
+  font-size: 1.3em;
 }
 .main-nav a:hover {
   color: #d55c54;
 }
-.page-header {
-  display: flex;
-  justify-content: space-between;
-  max-width: 1600px;
-  margin: 0 auto;
-  background: rgb(0, 0, 0);
-  opacity: 70%;
+
+.accordionBtn {
+  position: relative;
+  border: none;
+  background-color: inherit;
+  color: #fff;
+  text-align: right;
+  padding: 1em 0 0 0.3em;
+  font-size: 2em;
+}
+
+.around-accordion {
+  overflow-y: auto;
 }
 
 .fadein-before {
   opacity: 0;
   transform: translate(100px);
-  transition: opacity 1s, transform 1.5s;
+  transition: opacity 1s, transform 1s;
 }
 
 .fadein-after {
