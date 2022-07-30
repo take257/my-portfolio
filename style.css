@@ -48,12 +48,11 @@ body {
   color: #fff;
   width: 150px;
   padding: 0;
-  margin: -5em 0 0 30px;
+  margin: -5.5em 0 0 30px;
   float: right;
 }
 
 .main-nav {
-  border-top: 1px solid rgb(0, 0, 0);
   background: rgb(0, 0, 0);
   opacity: 80%;
   height: 0;
@@ -93,7 +92,7 @@ body {
 .fadein-before {
   opacity: 0;
   transform: translate(200px);
-  transition: opacity 1s, transform 2s;
+  transition: opacity 1s, transform 1.5s;
 }
 
 .fadein-after {
