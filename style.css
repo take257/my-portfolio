@@ -92,8 +92,8 @@ body {
 
 .fadein-before {
   opacity: 0;
-  transform: translate(100px);
-  transition: opacity 1s, transform 1s;
+  transform: translate(200px);
+  transition: opacity 1s, transform 2s;
 }
 
 .fadein-after {
@@ -118,19 +118,19 @@ body {
   width: 40%;
   max-width: 300px;
   min-width: 200px;
-  margin: 3em 0 0 3em;
+  margin: 3em 0 0 3.5em;
 }
 .removepicture {
   display: none;
 }
 
 .titlespace {
-  margin: 1em 0 1.5em 0;
+  margin: 1em 0 2.5em 0;
   font-size: 2.5em;
   height: 7vh;
 }
 .titlespace_other {
-  margin: 2em 0 1.5em 0;
+  margin: 2em 0 2.5em 0;
   height: 7vh;
   font-size: 2.5em;
 }
@@ -139,7 +139,7 @@ body {
   margin: 7em 7.65em 5em 8em;
 }
 .basic_l_and_a_2 {
-  margin: 5.5em 4em 1em 4em;
+  margin: 5.5em 4em 1em 4.5em;
 }
 .basic_l_and_a_3 {
   margin: 8em 4em 1em 6em;
