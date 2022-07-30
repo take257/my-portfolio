@@ -22,7 +22,7 @@ body {
   background-size: contain;
   background-position: center;
   background-image: url(./images/mypicture.png),
-    linear-gradient(to left top, #f3f4dc, #ffffff, #c1f3f7);
+    linear-gradient(to left top, #f3f4dc, #ffffff, #d8f0f1);
   background-blend-mode: multiply;
   min-height: 100vh;
 }
